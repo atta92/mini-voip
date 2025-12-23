@@ -30,8 +30,10 @@ const startCall = () => {
         timer = setInterval(() => {
             duration.value++
         }, 1000)
-    })
+    })    
 }
+
+// End the current call
       
 const endCall = () => {
     axios.post(`/call/end/${currentCall.value.id}`).then(res => {
