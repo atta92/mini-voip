@@ -53,7 +53,7 @@ class CallController extends Controller
         $duration = now()->diffInSeconds($start);
 
         $rate = Rate::first()->price_per_minute ?? 5;
-        $cost = ceil($duration / 60) * $rate;
+        $cost = ceil($duration / 60) * $rate; 
 
         // Update call
         $call->update([
